@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose';
 
 const PostSchema = new Schema(
     {
-        Bookid: { type: String, require: true },
+        Book_title: { type: String, require: true },
         Content: { type: String, require: true }
     },
     {

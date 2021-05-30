@@ -1,17 +1,15 @@
 import Publisher from '../models/Publisher';
 import Book from '../models/Book';
 import Post from '../models/Post'
-import multer from 'multer';
-
 
 const post = async (req, res) => {
     console.log('글쓰기 호출되었음');
     const { book_title, content } = req.body;
-    const book_id = await Book.findOne({ title: book_title }).select('_id');
+//    const book_id = await Book.findOne({ title: book_title }).select('_id');
 
-    console.log(book_id, content);
+    console.log(book_title, content);
     const post = new Post({
-        Bookid: book_id,
+        Book_title: book_title,
         Content: content
     });
 
